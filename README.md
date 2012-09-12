@@ -1,0 +1,4 @@
+cors-sample
+===========
+
+CORS sample
