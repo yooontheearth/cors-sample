@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<div id='result'></div>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.0.min.js" type="text/javascript"></script>
+<!--[if IE]>
+<script src="ie.xhr.js" type="text/javascript"></script>
+<![endif]-->
+<script type="text/javascript">
+	$(document).ready(function () {
+		jQuery.support.cors = true;
+		var $result = $('#result');
+		$result.text('Loading...');
+		$.ajax('http://localhost:3000/mrnobody', {
+			data: { name: 'Yoo' },
+			type: 'post',
+			xhr: window.IEXMLHttpRequest || jQuery.ajaxSettings.xhr,
+			crossDomain: true,
+			success: function (data, textStatus, jqXHR) {
+				$result.text(data);
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				$result.text('Failed to load data.' + errorThrown);
+			}
+		});
+	});
+</script>
+</body>
+</html>

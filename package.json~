@@ -1,0 +1,13 @@
+{
+  "name": "CORS-sample",
+  , "version": "0.0.1"
+  , "private": true
+  , "description": "Cross-Origin Resource Sharing sample"
+  , "author": "Yoo Matsuo"
+  , "license": "BSD"
+  , "dependencies": {
+      	"express": "2.5.0" ,
+		"commander" : "0.3.0",
+	  }
+}
+
